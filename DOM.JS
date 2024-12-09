@@ -50,3 +50,15 @@ function updateTotal() {
         : "black";
     })
     );
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const deleteButtons = document.querySelectorAll(".delete-btn");
+    
+      deleteButtons.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+          const card = event.target.closest(".card");
+          card.remove(); // Removes the product card from the DOM
+        });
+      });
+    });
+    
